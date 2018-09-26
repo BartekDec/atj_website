@@ -55,20 +55,39 @@
 
             <div class="container">
                 <div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-                    <div><p>Adres</p>
+                    <div class="row">
+                        <div class="col-md-4 contactIcon" style="text-align: center;">
+                            <p><i class="fa fa-map-marker" style="background:#1BBD36; color:white; font-size: 20px;"></i></p>
+                        </div>
+                        <div class="col-md-8">
+                            <p style="font-weight:bold; font-size: 20px;"> Adres</p>
+                            <p > ATJ GEODEZJA</p>
+                            <p> ul. Goszczyńskiego Seweryna 2</p>
+                            <p> 41-219 Sosnowiec</p>
+
+                        </div>
                     </div>
-                    <div><p>Telefon</p>
+                    <div class="row">
+                        <div class="col-md-4" style="text-align: center;">
+                            <p><i class="fa fa-phone" style="background:#1BBD36; color:white; font-size: 20px;"></i></p>
+                        </div>
+                        <div class="col-md-8">
+                            <p style="font-weight:bold; font-size: 20px;"> Telefon</p>
+                            <p> +48 692 385 525</p>
+
+                        </div>
                     </div>
-                    <div>
-                        <p>Email</p>
+                    <div class="row">
+                        <div class="col-md-4" style="text-align: center; ">
+                            <p><i class="fa fa-envelope" style="background:#1BBD36; color:white; font-size: 20px;"></i></p>
+                        </div>
+                        <div class="col-md-8">
+                            <p style="font-weight:bold; font-size: 20px;"> Email</p>
+                            <p> atjgeodezja@gmail.com</p>
+
+                        </div>
                     </div>
-        <form action="https://formspree.io/aprilpie18@gmail.com"
-    method="POST">
-  <input type="text" name="name">
-  <input type="email" name="_replyto">
-  <input type="text" name="message">
-  <input type="submit" value="Send">
-</form>
+
 
                 </div>
 
@@ -109,6 +128,10 @@
                             </div>
                         </div>
                     </section>
+
+                </div>
+                <div class="row wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms" style="height:100%; width:100%;">
+                    <div id="map" style="clear:none; height:400px;"></div>
 
                 </div>
 
@@ -167,6 +190,24 @@ Purchase the pro version with working PHP/AJAX contact form: https://bootstrapma
                 </div>
             </div>
         </footer>
+        <script>
+            // Initialize and add the map
+            function initMap() {
+                // The location of Uluru
+                var restaurant = {lat: 50.294897, lng: 19.161110};
+                // The map, centered at Uluru
+                var map = new google.maps.Map(
+                    document.getElementById('map'), {zoom: 14 , center: {lat:50.291566, lng:19.139983}, scrollwheel:false});
+                // The marker, positioned at Uluru
+                var marker = new google.maps.Marker({position: restaurant, map: map});
+            }
+        </script>
+        <script type="text/javascript" 
+                src="http://maps.google.com/maps?file=api&v=2&sensor=false&key=AIzaSyBycfzJwIhVnUmvG2Q7fWYrLJBD-Fhc_GE">
+        </script>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBycfzJwIhVnUmvG2Q7fWYrLJBD-Fhc_GE&callback=initMap">
+        </script>
 
         <script src="js/jquery-2.1.1.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -175,13 +216,13 @@ Purchase the pro version with working PHP/AJAX contact form: https://bootstrapma
         <script src="js/jquery.prettyPhoto.js"></script>
         <script src="js/jquery.isotope.min.js"></script>
         <script src="js/wow.min.js"></script>
-        
-<!--
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY">
-        </script>
+
+        <!--
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY">
+</script>
 -->
 
         <script src="js/functions.js"></script>
-        
+
     </body>
 </html>

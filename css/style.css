@@ -1256,3 +1256,7 @@ a.scrollup:hover{
     background-color:#ddd;
     color:#1BBD36;
 }
+#map{
+    height: 100%;
+    width: 100%;
+}
